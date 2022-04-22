@@ -1,0 +1,90 @@
+html,
+body {
+  height: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding-bottom: 100px;
+}
+
+.button {
+  @extend %manrope-500;
+  background-color: $primary;
+  color: $white;
+  border-radius: 10px;
+  letter-spacing: 0.03em;
+}
+
+.title {
+
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.015em;
+  color: $black;
+}
+
+.doctor-card {
+  max-width: 144px;
+  width: 100%;
+  box-shadow: 0px -24px 34px rgba(199, 201, 217, 0.15);
+  border-radius: 10px;
+  line-height: 1.2;
+  padding: 20px 15px;
+  text-align: center;
+  position: absolute;
+  bottom: 93px;
+  right: 564px;
+  background-color: $white;
+
+  &__img {
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    @extend %manrope-700;
+    color: $black;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    @extend %manrope-400;
+    display: block;
+    font-size: 14px;
+    line-height: 1.3;
+    color: $grey;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__button {
+    @extend %manrope-600;
+    padding: 10px;
+    display: block;
+    font-size: 12px;
+    line-height: 1.3;
+  
+    
+  }
+}
