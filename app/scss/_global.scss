@@ -34,12 +34,21 @@ body {
 }
 
 .title {
-@extend %manrope-700;
+  @extend %manrope-700;
   text-align: center;
   font-size: 32px;
   line-height: 1.25;
   letter-spacing: 0.015em;
   color: $black;
+}
+
+.pretitle {
+  font-size: 14px;
+  color: $primary;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+  @extend %manrope-700;
 }
 
 .doctor-card {
@@ -55,17 +64,49 @@ body {
   right: 560px;
   background-color: $white;
 
+  &--big {
+    max-width: 202px;
+    width: 100%;
+    bottom: 301px;
+    right: 473px;
+    padding: 18px 28px;
+  }
+
+  &__content {
+    display: flex;
+    margin-bottom: 3px;
+
+    &-text {
+      padding-top: 4px;
+    }
+
+    &-wrap {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link-wrap {
+    padding: 0 10px 10px 0;
+
+  }
+
   &__img {
     margin: 0 auto;
     border-radius: 50%;
-    margin-bottom: 10px;
   }
 
   &__title {
     @extend %manrope-700;
     color: $black;
     font-size: 14px;
-    margin-bottom: 4px;
+    padding-bottom: 2px;
+    letter-spacing: 0.03em;
+
+    &--left {
+      letter-spacing: 0.03em;
+      text-align: left;
+
+    }
   }
 
   &__text {
@@ -75,7 +116,14 @@ body {
     line-height: 1.3;
     color: $grey;
     display: block;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 0.03em;
+
+    &--left {
+      text-align: left;
+      padding-bottom: 20px;
+
+    }
   }
 
   &__button {
@@ -84,7 +132,11 @@ body {
     display: block;
     font-size: 12px;
     line-height: 1.3;
-  
-    
+
+    &--big {
+      padding: 8px 37px;
+      color: $primary;
+      background-color: rgba(237, 241, 255, 1);
+    }
   }
 }

@@ -93,16 +93,12 @@
 
 
 .solutions {
-
+  padding-bottom: 180px;
 
   &__pretitle {
-    @extend %manrope-700;
+
     text-align: center;
-    font-size: 14px;
-    color: $primary;
-    line-height: 1.4;
-    letter-spacing: 0.03em;
-    margin-bottom: 10px;
+
   }
 
   &__title {
@@ -159,7 +155,6 @@
         left: 0;
         background-color: $primary;
       }
-
     }
 
     &__subtitle {
@@ -181,6 +176,66 @@
   }
 }
 
+
+.find {
+  &__content {
+    padding-left: 100px;
+    height: 591px;
+    background-position: 94% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 36%, 47%;
+    position: relative;
+  }
+
+  &__title {
+    text-align: left;
+    max-width: 493px;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    @extend %manrope-500;
+    font-size: 14px;
+    color: $grey;
+    max-width: 531px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin-bottom: 29px;
+  }
+
+  &__check {
+    @extend %manrope-600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $black;
+    letter-spacing: 0.02em;
+    padding-left: 36px;
+    margin-bottom: 26px;
+
+
+    p {
+      position: relative;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: -2px;
+        left: -36px;
+        background-image: url('../images/find/check.svg')
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 19px;
+      }
+    }
+  }
+
+  &__button {
+    padding: 16px 36px;
+  }
+}
 
 
 
