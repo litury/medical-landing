@@ -178,6 +178,9 @@
 
 
 .find {
+
+  padding-bottom: 146px;
+
   &__content {
     padding-left: 100px;
     height: 591px;
@@ -235,6 +238,111 @@
   &__button {
     padding: 16px 36px;
   }
+}
+
+.available {
+
+  &__content {
+    display: flex;
+    padding-left: 108px;
+  }
+
+  &__img {
+    width: 611px;
+    height: 375px;
+    border-radius: 1000px;
+
+
+
+
+
+    &-wrap {
+      margin-right: 69px;
+      padding-top: 11px;
+      position: relative;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 611px;
+        height: 375px;
+        bottom: 11px;
+        left: 8px;
+        background-image: url('../images/available/rectop.svg');
+        z-index: -1;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 611px;
+        height: 375px;
+        top: 26px;
+        right: 7px;
+        background-image: url('../images/available/recbot.svg');
+        z-index: -1;
+      }
+    }
+  }
+
+  &__info {
+    max-width: 472px;
+
+  }
+
+  &__title {
+    text-align: left;
+
+    &-wrap {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__text {
+    @extend %manrope-500;
+    font-size: 14px;
+    color: $grey;
+    max-width: 531px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin-bottom: 29px;
+  }
+
+
+  &__check {
+    @extend %manrope-600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $black;
+    letter-spacing: 0.02em;
+    padding-left: 36px;
+    margin-bottom: 26px;
+    position: relative;
+
+
+
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+      background-image: url('../images/find/check.svg')
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__button {
+    padding: 16px 36px;
+  }
+
+
+
 }
 
 
