@@ -376,6 +376,8 @@
 
 .feedback {
 
+  padding-bottom: 351px;
+
   &__title-wrap {
     margin-bottom: 10px;
   }
@@ -460,9 +462,72 @@
 
     &-img--left {
       margin-right: 21px;
-      
+
     }
   }
+}
+
+.footer {
+
+  &__inner {
+    padding: 0 112px 0 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 10px;
+
+    &-wrap {
+      max-width: 430px;
+      width: 100%;
+      padding-top: 5px;
+      margin-right: 78px;
+    }
+  }
+
+  &__text {
+
+    &-wrap {
+      @extend %manrope-500;
+      font-size: 14px;
+      letter-spacing: 0.015em;
+      line-height: 1.4;
+    }
+  }
+
+  &__title-wrap {
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    @extend %manrope-700;
+    margin-bottom: 15px;
+  }
+
+
+  &__list {
+
+    @extend %manrope-400;
+    font-size: 14px;
+    letter-spacing: 0.015em;
+
+    &--social {
+      display: flex;
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &--social:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
 }
 
 
