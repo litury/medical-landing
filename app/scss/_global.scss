@@ -3,109 +3,94 @@ body {
   height: 100%;
 }
 
+body {
+  @extend %manrope-500;
+  color: $grey-500;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  letter-spacing: 1.4;
+}
+
 .sr-only {
-  position: absolute;
-  width: 1px;
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  padding: 0;
+  position: absolute;
   white-space: nowrap;
-  border-width: 0;
+  width: 1px;
 }
 
 .container {
-  max-width: 1470px;
   margin: 0 auto;
+  max-width: 1470px;
   padding: 0 15px;
-}
-
-.section {
-  padding-bottom: 104px;
 }
 
 .button {
   @extend %manrope-500;
-  background-color: $primary;
-  color: $white;
+  background-color: $blue-400;
   border-radius: 10px;
+  color: $white-100;
   letter-spacing: 0.03em;
 }
 
 .title {
   @extend %manrope-700;
-  text-align: center;
+  color: $black-600;
   font-size: 32px;
-  line-height: 1.25;
   letter-spacing: 0.015em;
-  color: $black;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .pretitle {
-  font-size: 14px;
-  color: $primary;
-  line-height: 1.4;
-  letter-spacing: 0.03em;
-  margin-bottom: 10px;
   @extend %manrope-700;
+  color: $blue-400;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.doctor-card {
-  max-width: 144px;
-  width: 100%;
-  box-shadow: 0px -24px 34px rgba(199, 201, 217, 0.15);
+.doctorСard {
+  background-color: $white-100;
   border-radius: 10px;
-  line-height: 1.2;
-  padding: 20px 15px;
-  text-align: center;
+  bottom: 14%;
+  box-shadow: 0px -24px 34px rgba(199, 201, 217, 0.15);
+  letter-spacing: 0.03em;
+  max-width: 144px;
+  padding: 16px;
   position: absolute;
-  bottom: 83px;
-  right: 560px;
-  background-color: $white;
+  right: 39%;
+  text-align: center;
+  width: 100%;
 
   &--big {
     max-width: 202px;
     width: 100%;
-    bottom: 301px;
-    right: 473px;
+    bottom: 51%;
+    right: 33%;
     padding: 18px 28px;
-  }
-
-  &__content {
-    display: flex;
-    margin-bottom: 3px;
-
-    &-text {
-      padding-top: 4px;
-    }
-
-    &-wrap {
-      margin-bottom: 10px;
-    }
-  }
-
-  &__link-wrap {
-    padding: 0 10px 10px 0;
-
   }
 
   &__img {
     margin: 0 auto;
     border-radius: 50%;
+    margin-bottom: 10px;
   }
 
   &__title {
     @extend %manrope-700;
-    color: $black;
+    color: $black-600;
+    margin-bottom: 4px;
     font-size: 14px;
-    padding-bottom: 2px;
-    letter-spacing: 0.03em;
+    line-height: 1.4;
 
-    &--left {
-      letter-spacing: 0.03em;
+
+    &--big {
       text-align: left;
-
     }
   }
 
@@ -114,15 +99,13 @@ body {
     display: block;
     font-size: 14px;
     line-height: 1.3;
-    color: $grey;
+    color: $grey-500;
     display: block;
-    padding-bottom: 5px;
-    letter-spacing: 0.03em;
+    margin-bottom: 10px;
 
-    &--left {
+    &--big {
       text-align: left;
-      padding-bottom: 20px;
-
+      margin-bottom: 10px;
     }
   }
 
@@ -133,10 +116,32 @@ body {
     font-size: 12px;
     line-height: 1.3;
 
+
     &--big {
       padding: 8px 37px;
-      color: $primary;
+      color: $blue-400;
       background-color: rgba(237, 241, 255, 1);
     }
+  }
+
+  &__wrap {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__contentText {
+    padding-top: 4px;
+  }
+
+  &__linkWrap {
+    padding-right: 14px;
   }
 }
