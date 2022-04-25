@@ -20,5 +20,8 @@
     "imagemin": "^8.0.1",
     "jquery": "^3.6.0",
     "sass": "^1.49.4"
+  },
+  "dependencies": {
+    "swiper": "^8.1.4"
   }
 }
