@@ -1,7 +1,9 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'media';
 @import 'global';
+
 
 
 .burger {
@@ -23,6 +25,19 @@
     max-width: 1240px;
     padding-top: 40px;
     width: 100%;
+
+    @include lg {
+      max-width: 1000px;
+    }
+
+    @include md {
+      max-width: 800px;
+    }
+
+    @include sm {
+      display: none;
+    }
+
   }
 
   &__menu {
@@ -54,12 +69,30 @@
 .hero {
   margin-bottom: 100px;
 
+  @include lg {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 50px;
+  }
+
   &__content {
     background-position: 102% 100%;
     background-repeat: no-repeat;
     height: 615px;
     padding-left: 84px;
     position: relative;
+
+    @include lg {
+      background-size: 60%;
+      padding-left: 120px;
+    }
+
+    @include sm {
+      background-size: 80%;
+      background-position: 138% 98%;
+    }
   }
 
   &__title {
@@ -73,6 +106,20 @@
     padding-top: 100px;
     width: 100%;
 
+    @include lg {
+      font-size: 47px;
+    }
+
+    @include md {
+      font-size: 37px;
+      max-width: 500px;
+    }
+
+    @include sm {
+
+      font-size: 37px;
+    }
+
     &--blue {
       color: $blue-400;
     }
@@ -83,6 +130,18 @@
     margin-bottom: 26px;
     max-width: 610px;
     width: 100%;
+
+    @include lg {
+      max-width: 520px;
+    }
+
+    @include md {
+      max-width: 320px;
+    }
+
+    @include sm {
+      max-width: 200px;
+    }
   }
 
   &__content-button {
@@ -95,6 +154,14 @@
 .solutions {
   margin-bottom: 180px;
 
+  @include lg {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 70px;
+  }
+
   &__content {
     display: flex;
     gap: 30px;
@@ -102,9 +169,29 @@
     max-width: 1238px;
     width: 100%;
 
+    @include lg {
+      max-width: 1000px;
+    }
+
+    @include md {
+      max-width: 605px;
+      flex-wrap: wrap;
+    }
+
+
     &--rating {
       max-width: 921px;
+
+      @include lg {
+        max-width: 725px;
+      }
+
+      @include md {
+        max-width: 750px;
+      }
     }
+
+
   }
 
   &__item {
@@ -115,9 +202,24 @@
     position: relative;
     text-align: left;
 
+    @include lg {
+      max-width: 227px;
+      padding: 87px 23px 34px;
+    }
+
+
     &--rating {
       padding: 46px 78px;
       text-align: center;
+
+      @include lg {
+        padding: 46px;
+      }
+
+      @include md {
+        max-width: 230px;
+        padding: 46px 49px;
+      }
     }
 
     &::before {
@@ -127,6 +229,10 @@
       position: absolute;
       top: 54px;
       width: 40px;
+
+      @include lg {
+        top: 25px;
+      }
     }
 
     &--search::before {
@@ -194,16 +300,30 @@
 }
 
 .find {
-  padding-bottom: 146px;
+  margin-bottom: 146px;
 
+  @include lg {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 70px;
+  }
 
   &__content {
-    background-position: 95%, 102% 96%;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
     height: 596px;
     padding-left: 85px;
     position: relative;
 
+    @include lg {
+      padding-left: 120px;
+    }
+
+    @include md {
+      background-size: 50%, 57%;
+    }
   }
 
   &__pretitle {
@@ -264,12 +384,28 @@
 .available {
   margin-bottom: 166px;
 
+  @include lg {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 70px;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1222px;
     width: 100%;
+
+    @include lg {
+      max-width: 1111px;
+    }
+
+    @include md {
+      max-width: 800px;
+    }
   }
 
   &__imgWrap {
@@ -277,6 +413,9 @@
     padding-top: 9px;
     position: relative;
 
+    @include md {
+      padding-top: 67px;
+    }
 
     &::before {
       content: " ";
@@ -287,6 +426,17 @@
       position: absolute;
       width: 611px;
       z-index: -1;
+      background-repeat: no-repeat;
+      background-size: 80%;
+
+      @include lg {
+        right: 0;
+      }
+
+      @include md {
+        left: -50px;
+        bottom: -27px;
+      }
     }
 
     &::after {
@@ -298,6 +448,12 @@
       top: 26px;
       width: 611px;
       z-index: -1;
+      background-repeat: no-repeat;
+      background-size: 80%;
+
+      @include md {
+        right: -135px;
+      }
     }
   }
 
@@ -305,12 +461,26 @@
     border-radius: 1000px;
     height: 375px;
     width: 611px;
+
+    @include md {
+      width: 87%;
+      height: 87%;
+    }
   }
 
   &__info {
     letter-spacing: 0.02em;
     margin-right: 70px;
     max-width: 472px;
+
+    @include lg {
+      margin-right: 0;
+    }
+
+    @include md {
+      max-width: 338px;
+      margin-right: 0;
+    }
   }
 
   &__pretitle {
@@ -359,10 +529,22 @@
 
 .rating {
   margin-bottom: 151px;
+
+  @include lg {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 70px;
+  }
 }
 
 .feedback {
-  padding-bottom: 353px;
+  margin-bottom: 242px;
+
+  @include lg {
+    margin-bottom: 70px;
+  }
 
   &__title {
     margin-bottom: 8px;
@@ -375,8 +557,6 @@
     text-align: center;
   }
 
-
-
   &__content {
     display: flex;
     background-color: rgba(237, 241, 255, 1);
@@ -384,7 +564,6 @@
     width: 100%;
     height: 350px;
     justify-content: space-around;
-
   }
 
   &__imgWrap {
@@ -404,8 +583,6 @@
       z-index: -1;
     }
   }
-
-  &__img {}
 
   &__quote {
     @extend %manrope-500;
@@ -449,12 +626,29 @@
 .footer {
   padding-bottom: 104px;
 
+  @include lg {
+    padding-bottom: 50px;
+  }
+
+  @include md {
+    padding-bottom: 30px;
+  }
+
+
   &__inner {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1237px;
     width: 100%;
+
+    @include lg {
+      max-width: 1111px;
+    }
+
+    @include md {
+      max-width: 900px;
+    }
   }
 
   &__logoWrap {
@@ -462,6 +656,10 @@
     max-width: 430px;
     padding-top: 6px;
     width: 100%;
+
+    @include md {
+      max-width: 300px;
+    }
   }
 
   &__logo {
@@ -474,6 +672,10 @@
     font-size: 14px;
     letter-spacing: 0.015em;
     line-height: 1.4;
+
+    @include md {
+      font-size: 12px;
+    }
   }
 
   &__content {
@@ -510,56 +712,4 @@
       margin-right: 10px;
     }
   }
-
 }
-
-.swiper {
-  height: 462px;
-
-  &-button-prev,
-  &-button-next {
-    top: 80%;
-  }
-
-  &-button-prev {
-    left: 80%;
-
-    &:after {
-      content: " ";
-      background-image: url('../images/feedback/arlef.svg');
-      height: 17px;
-      position: absolute;
-      right: -13px;
-      top: 92px;
-      width: 33px;
-      z-index: -1;
-    }
-  }
-
-  &-button-next {
-    right: 10%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@import 'media';
