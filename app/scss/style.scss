@@ -1,45 +1,19 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'media';
 @import 'global';
+
 
 
 .burger {
   display: none;
 }
 
-
-.menu {
-  display: flex;
-  justify-content: flex-start;
-  margin-right: 507px;
-  padding-top: 12px;
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 43px;
-    }
-  }
-}
-
-.user-nav {
-  line-height: 1.4;
-
-  &__button {
-    padding: 12px 22px;
-
-    &--white {
-      background-color: transparent;
-      color: $black;
-      margin-right: 18px;
-    }
-  }
-}
-
 .header {
-  font-size: 14px;
 
-  &__wrapper-logo {
+  &__logo {
+    margin-right: 40px;
     padding-top: 13px;
   }
 
@@ -47,41 +21,127 @@
     @extend %manrope-500;
     display: flex;
     justify-content: space-between;
-    padding: 27px 102px 25px 100px;
+    margin: 0 auto;
+    max-width: 1240px;
+    padding-top: 40px;
+    width: 100%;
+
+    @include lg {
+      max-width: 1000px;
+    }
+
+    @include md {
+      max-width: 800px;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: auto;
+    padding-top: 12px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__userNav {
+    line-height: 1.4;
+  }
+
+  &__button {
+    padding: 12px 22px;
+
+    &--white {
+      background-color: transparent;
+      color: $black-600;
+      margin-right: -4px;
+    }
+  }
+}
+
+.hero {
+  margin-bottom: 100px;
+
+  @include lg {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 50px;
   }
 
   &__content {
-    padding-left: 100px;
-    padding-top: 78px;
-    height: 588px;
-    background-position: 100% 100%;
+    background-position: 102% 100%;
     background-repeat: no-repeat;
-    background-size: 51%, 58%;
+    height: 615px;
+    padding-left: 84px;
     position: relative;
+
+    @include lg {
+      background-size: 60%;
+      padding-left: 120px;
+    }
+
+    @include sm {
+      background-size: 80%;
+      background-position: 138% 98%;
+    }
   }
 
   &__title {
     @extend %manrope-700;
-    color: $black;
+    color: $black-600;
     font-size: 54px;
-    line-height: 1.3;
     letter-spacing: 0.02em;
+    line-height: 1.3;
     margin-bottom: 26px;
+    max-width: 636px;
+    padding-top: 100px;
+    width: 100%;
+
+    @include lg {
+      font-size: 47px;
+    }
+
+    @include md {
+      font-size: 37px;
+      max-width: 500px;
+    }
+
+    @include sm {
+
+      font-size: 37px;
+    }
 
     &--blue {
-      color: $primary;
+      color: $blue-400;
     }
   }
 
   &__text {
     @extend %manrope-500;
-    color: $grey;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.03em;
+    margin-bottom: 26px;
     max-width: 610px;
     width: 100%;
-    margin-bottom: 26px;
+
+    @include lg {
+      max-width: 520px;
+    }
+
+    @include md {
+      max-width: 320px;
+    }
+
+    @include sm {
+      max-width: 200px;
+    }
   }
 
   &__content-button {
@@ -91,154 +151,209 @@
   }
 }
 
-
 .solutions {
-  padding-bottom: 180px;
+  margin-bottom: 180px;
 
-  &__pretitle {
-    text-align: center;
+  @include lg {
+    margin-bottom: 100px;
   }
 
-  &__title {
-    margin-bottom: 50px;
+  @include md {
+    margin-bottom: 70px;
   }
 
-  &-content {
+  &__content {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1238px;
+    width: 100%;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-    padding: 0 102px 0 100px;
+    @include lg {
+      max-width: 1000px;
+    }
+
+    @include md {
+      max-width: 605px;
+      flex-wrap: wrap;
+    }
+
 
     &--rating {
-      grid-template-columns: repeat(3, 1fr);
-      padding: 0 259px 0 260px;
-    }
+      max-width: 921px;
 
-    &__item {
-      text-align: left;
-      position: relative;
-      max-width: 287px;
-      padding: 108px 49px 34px 40px;
-      box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
-      border-radius: 0px 0px 10px 10px;
-
-      &--rating {
-        padding: 50px 72px 44px 68px;
-        text-align: center;
+      @include lg {
+        max-width: 725px;
       }
 
-      &::before {
-        content: " ";
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        top: 54px;
-        left: 39px;
-      }
-
-      &--search::before {
-        background-image: url('../images/solutions/search.svg')
-      }
-
-      &--profile::before {
-        background-image: url('../images/solutions/profile.svg')
-      }
-
-      &--calendar::before {
-        background-image: url('../images/solutions/calendar.svg')
-      }
-
-      &--star::before {
-        background-image: url('../images/solutions/star.svg')
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        display: block;
-        top: 0;
-        left: 0;
-        background-color: $primary;
+      @include md {
+        max-width: 750px;
       }
     }
 
-    &__subtitle {
-      @extend %manrope-700;
-      font-size: 14px;
-      line-height: 2;
+
+  }
+
+  &__item {
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
+    max-width: 287px;
+    padding: 108px 39px 34px;
+    position: relative;
+    text-align: left;
+
+    @include lg {
+      max-width: 227px;
+      padding: 87px 23px 34px;
+    }
+
+
+    &--rating {
+      padding: 46px 78px;
+      text-align: center;
+
+      @include lg {
+        padding: 46px;
+      }
+
+      @include md {
+        max-width: 230px;
+        padding: 46px 49px;
+      }
+    }
+
+    &::before {
+      content: " ";
+      height: 40px;
+      left: 39px;
+      position: absolute;
+      top: 54px;
+      width: 40px;
+
+      @include lg {
+        top: 25px;
+      }
+    }
+
+    &--search::before {
+      background-image: url('../images/solutions/search.svg')
+    }
+
+    &--profile::before {
+      background-image: url('../images/solutions/profile.svg')
+    }
+
+    &--calendar::before {
+      background-image: url('../images/solutions/calendar.svg')
+    }
+
+    &--star::before {
+      background-image: url('../images/solutions/star.svg')
+    }
+
+    &::after {
+      content: "";
+      background-color: $blue-400;
+      display: block;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    @extend %manrope-700;
+    color: $black-600;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 2;
+    margin-bottom: 13px;
+
+    &--rating {
+      font-size: 32px;
+      letter-spacing: 0.03em;
+      line-height: 1.3;
       margin-bottom: 13px;
-      color: $black;
-      letter-spacing: 0.03em;
-
-      &--rating {
-        font-size: 32px;
-        line-height: 1.3;
-        letter-spacing: 0.03em;
-        margin-bottom: 13px;
-      }
     }
+  }
 
-    &__text {
-      @extend %manrope-400;
-      font-size: 14px;
-      line-height: 1.1;
-      color: $grey;
-      letter-spacing: 0.03em;
+  &__text {
+    @extend %manrope-400;
+    color: $grey-500;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
 
-      &--rating {
+    &--rating {
 
-        & p:first-child {
-          @extend %manrope-700;
-          font-size: 14px;
-          line-height: 2;
-          color: $black;
-          letter-spacing: 0.03em;
-        }
+      & p:first-child {
+        @extend %manrope-700;
+        color: $black-600;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        line-height: 2;
       }
     }
   }
 }
 
-
 .find {
-  padding-bottom: 146px;
+  margin-bottom: 146px;
+
+  @include lg {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 70px;
+  }
 
   &__content {
-    padding-left: 100px;
-    height: 591px;
-    background-position: 94% 100%, 100% 100%;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
-    background-size: 36%, 47%;
+    height: 596px;
+    padding-left: 85px;
     position: relative;
+
+    @include lg {
+      padding-left: 120px;
+    }
+
+    @include md {
+      background-size: 50%, 57%;
+    }
+  }
+
+  &__pretitle {
+    text-align: left;
   }
 
   &__title {
-    text-align: left;
-    max-width: 493px;
     margin-bottom: 27px;
+    max-width: 493px;
+    text-align: left;
   }
 
   &__text {
     @extend %manrope-500;
+    color: $grey-500;
     font-size: 14px;
-    color: $grey;
-    max-width: 531px;
-    line-height: 1.4;
     letter-spacing: 0.02em;
+    line-height: 1.4;
     margin-bottom: 29px;
+    max-width: 531px;
   }
 
   &__check {
     @extend %manrope-600;
+    color: $black-600;
     font-size: 14px;
-    line-height: 1.4;
-    color: $black;
     letter-spacing: 0.02em;
-    padding-left: 36px;
+    line-height: 1.4;
     margin-bottom: 26px;
+    padding-left: 36px;
 
 
     p {
@@ -246,12 +361,12 @@
 
       &::before {
         content: " ";
-        position: absolute;
-        width: 24px;
+        background-image: url('../images/find/check.svg');
         height: 24px;
-        top: -2px;
         left: -36px;
-        background-image: url('../images/find/check.svg')
+        position: absolute;
+        top: -2px;
+        width: 24px;
       }
 
       &:not(:last-child) {
@@ -261,92 +376,144 @@
   }
 
   &__button {
+    font-size: 16px;
     padding: 16px 36px;
   }
 }
 
 .available {
-  padding-bottom: 166px;
+  margin-bottom: 166px;
+
+  @include lg {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 70px;
+  }
 
   &__content {
     display: flex;
-    padding-left: 108px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1222px;
+    width: 100%;
+
+    @include lg {
+      max-width: 1111px;
+    }
+
+    @include md {
+      max-width: 800px;
+    }
+  }
+
+  &__imgWrap {
+    margin-right: 30px;
+    padding-top: 9px;
+    position: relative;
+
+    @include md {
+      padding-top: 67px;
+    }
+
+    &::before {
+      content: " ";
+      background-image: url('../images/available/rectop.svg');
+      bottom: 11px;
+      height: 375px;
+      left: 8px;
+      position: absolute;
+      width: 611px;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-size: 80%;
+
+      @include lg {
+        right: 0;
+      }
+
+      @include md {
+        left: -50px;
+        bottom: -27px;
+      }
+    }
+
+    &::after {
+      content: " ";
+      background-image: url('../images/available/recbot.svg');
+      height: 375px;
+      position: absolute;
+      right: 7px;
+      top: 26px;
+      width: 611px;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-size: 80%;
+
+      @include md {
+        right: -135px;
+      }
+    }
   }
 
   &__img {
-    width: 611px;
-    height: 375px;
     border-radius: 1000px;
+    height: 375px;
+    width: 611px;
 
-    &-wrap {
-      margin-right: 69px;
-      padding-top: 11px;
-      position: relative;
-
-      &::before {
-        content: " ";
-        position: absolute;
-        width: 611px;
-        height: 375px;
-        bottom: 11px;
-        left: 8px;
-        background-image: url('../images/available/rectop.svg');
-        z-index: -1;
-      }
-
-      &::after {
-        content: " ";
-        position: absolute;
-        width: 611px;
-        height: 375px;
-        top: 26px;
-        right: 7px;
-        background-image: url('../images/available/recbot.svg');
-        z-index: -1;
-      }
+    @include md {
+      width: 87%;
+      height: 87%;
     }
   }
 
   &__info {
+    letter-spacing: 0.02em;
+    margin-right: 70px;
     max-width: 472px;
-  }
 
-  &__title {
-    text-align: left;
+    @include lg {
+      margin-right: 0;
+    }
 
-    &-wrap {
-      margin-bottom: 26px;
+    @include md {
+      max-width: 338px;
+      margin-right: 0;
     }
   }
 
+  &__pretitle {
+    text-align: left;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+
   &__text {
     @extend %manrope-500;
-    font-size: 14px;
-    color: $grey;
-    max-width: 531px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
     margin-bottom: 29px;
+    max-width: 531px;
   }
 
   &__check {
     @extend %manrope-600;
-    font-size: 14px;
-    line-height: 1.4;
-    color: $black;
-    letter-spacing: 0.02em;
-    padding-left: 36px;
+    color: $black-600;
     margin-bottom: 26px;
+    padding-left: 36px;
     position: relative;
 
     &::before {
       content: " ";
-      position: absolute;
-      width: 24px;
+      background-image: url('../images/find/check.svg');
       height: 24px;
-      top: 0;
       left: 0;
-      background-image: url('../images/find/check.svg')
+      position: absolute;
+      top: 0;
+      width: 24px;
     }
 
     &:not(:last-child) {
@@ -355,159 +522,177 @@
   }
 
   &__button {
+    font-size: 16px;
     padding: 16px 36px;
   }
 }
 
-
 .rating {
-  padding-bottom: 151px;
+  margin-bottom: 151px;
 
-  &__pretitle {
-    text-align: center;
+  @include lg {
+    margin-bottom: 100px;
   }
 
-  &__title {
-    &-wrap {
-      margin-bottom: 50px;
-    }
+  @include md {
+    margin-bottom: 70px;
   }
 }
 
 .feedback {
+  margin-bottom: 242px;
 
-  padding-bottom: 351px;
-
-  &__title-wrap {
-    margin-bottom: 10px;
+  @include lg {
+    margin-bottom: 70px;
   }
 
-  &__text-wrap {
-    text-align: center;
-    color: $grey;
-    @extend %manrope-500;
-    font-size: 14px;
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
     letter-spacing: 0.015em;
     line-height: 1.5em;
     margin-bottom: 50px;
+    text-align: center;
   }
 
-  &__photo {
-    background-color: rgba(237, 241, 255, 1);
-    padding-top: 80px;
-    max-width: 1340px;
-    height: 350px;
+  &__content {
     display: flex;
-    justify-content: space-between;
-    position: relative;
-
+    background-color: rgba(237, 241, 255, 1);
+    max-width: 1341px;
+    width: 100%;
+    height: 350px;
+    justify-content: space-around;
   }
 
-  &__img {
-    padding-left: 100px;
+  &__imgWrap {
+    padding-top: 80px;
+    position: relative;
+    z-index: 1;
+    margin-right: 10px;
 
-
-    &-wrap {
-      position: relative;
-      z-index: 1;
-
-      &::before {
-        content: " ";
-        position: absolute;
-        width: 420px;
-        height: 360px;
-        top: 11px;
-        right: -13px;
-        background-image: url('../images/feedback/rectangle.svg');
-        z-index: -1;
-      }
+    &::before {
+      content: " ";
+      background-image: url('../images/feedback/rectangle.svg');
+      height: 360px;
+      position: absolute;
+      right: -13px;
+      top: 92px;
+      width: 420px;
+      z-index: -1;
     }
   }
 
   &__quote {
-    max-width: 535px;
-    width: 100%;
-    margin-right: 79px;
     @extend %manrope-500;
     font-size: 25px;
-    line-height: 1.6;
-    padding-top: 19px;
     letter-spacing: 0.03em;
-
+    line-height: 1.6;
+    max-width: 535px;
+    width: 100%;
+    padding-top: 100px;
   }
 
   &__author {
-    font-style: normal;
     @extend %manrope-700;
     display: flex;
     flex-direction: column;
-    padding-top: 134px;
     font-size: 20px;
+    font-style: normal;
     line-height: 1;
-
+    padding-top: 134px;
 
     & p {
-      font-size: 14px;
       @extend %manrope-500;
+      color: $grey-500;
+      font-size: 14px;
       padding-top: 15px;
-      color: $grey;
     }
   }
 
   &__arrow {
+    bottom: -67px;
     display: flex;
     position: absolute;
-    right: 5px;
-    bottom: -67px;
+    right: 18px;
+  }
 
-    &-img--left {
-      margin-right: 21px;
-
-    }
+  &__arrowImg--left {
+    margin-right: 21px;
   }
 }
 
 .footer {
+  padding-bottom: 104px;
+
+  @include lg {
+    padding-bottom: 50px;
+  }
+
+  @include md {
+    padding-bottom: 30px;
+  }
+
 
   &__inner {
-    padding: 0 112px 0 100px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1237px;
+    width: 100%;
+
+    @include lg {
+      max-width: 1111px;
+    }
+
+    @include md {
+      max-width: 900px;
+    }
+  }
+
+  &__logoWrap {
+    margin-right: 69px;
+    max-width: 430px;
+    padding-top: 6px;
+    width: 100%;
+
+    @include md {
+      max-width: 300px;
+    }
   }
 
   &__logo {
     display: block;
-    margin-bottom: 10px;
-
-    &-wrap {
-      max-width: 430px;
-      width: 100%;
-      padding-top: 5px;
-      margin-right: 78px;
-    }
+    margin-bottom: 13px;
   }
 
   &__text {
+    @extend %manrope-500;
+    font-size: 14px;
+    letter-spacing: 0.015em;
+    line-height: 1.4;
 
-    &-wrap {
-      @extend %manrope-500;
-      font-size: 14px;
-      letter-spacing: 0.015em;
-      line-height: 1.4;
+    @include md {
+      font-size: 12px;
     }
   }
 
-  &__title-wrap {
-    font-size: 18px;
-    line-height: 1.4;
-    letter-spacing: 0.03em;
+  &__content {
+    margin-right: 10px;
+  }
+
+  &__title {
     @extend %manrope-700;
+    color: $black-600;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
     margin-bottom: 15px;
   }
 
 
   &__list {
-
     @extend %manrope-400;
     font-size: 14px;
     letter-spacing: 0.015em;
@@ -527,25 +712,4 @@
       margin-right: 10px;
     }
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@import 'media';

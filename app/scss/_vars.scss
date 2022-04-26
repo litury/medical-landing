@@ -1,8 +1,14 @@
-$primary: #4D77FF;
-$black: #121212;
-$grey: #696969;
-$white: #FFFFFF;
-$silver: #C7C9D9;
+$black-600: #121212;
+$blue-400: #4D77FF;
+$grey-500: #696969;
+$silver-300:#C7C9D9;
+$white-100: #FFFFFF;
+
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px);
 
 %manrope-400 {
   font-family: 'Manrope-Light';
