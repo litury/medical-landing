@@ -11,9 +11,6 @@ body {
   letter-spacing: 1.4;
 }
 
-
-
-
 .swiper {
   height: 462px;
 
@@ -32,12 +29,12 @@ body {
   }
 
   &-button-prev {
-    background-image: url('../images/feedback/arlef.svg');
+    background-image: url('../img/feedback/arlef.svg');
   }
 
   &-button-next {
     left: 91%;
-    background-image: url('../images/feedback/arrig.svg');
+    background-image: url('../img/feedback/arrig.svg');
   }
 }
 

@@ -1,82 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Healhty Carely</title>
-
-  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/main.css">
-
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script defer src="js/main.js"></script>
-</head>
-
-<picture>
-  <source srcset="img/cover.avif" type="image/avif">
-  <source srcset="img/cover.webp" type="image/webp">
-  <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
-</picture>
+@include('partials/head.html')
 
 <body>
-    <header class="header">
-    <div class="header__top">
-      <div class="container">
-
-        <nav class="header__nav">
-
-          <div class="header__logo">
-            <a class="header__logoLink" href="#header">
-              <img class="logo" src="../img/header/logo.svg" alt="logo">
-            </a>
-          </div>
-
-          <!-- <button class="burger" type="button">
-              <span class="burger__line"></span>
-              <span class="sr-only">Open menu</span>
-            </button> -->
-
-          <ul class="header__menu">
-            <li class="header__item">
-              <a class="header__link" href="#about">
-                Home
-              </a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#skills">
-                Doctor
-              </a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#services">
-                Services
-              </a>
-            </li>
-            <li class="header__item">
-              <a class="header__link" href="#portfolio">
-                Review
-              </a>
-            </li>
-          </ul>
-
-          <div class="header__userNav">
-            <button class="header__button header__button--white button">
-              Sign In
-            </button>
-
-            <button class="header__button button">
-              Sign Up
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
-
+  @include('partials/header.html')
   <main>
     <section class="hero">
       <div class="container">
@@ -93,8 +20,8 @@
 
           <div class="hero__text">
             <p>
-              Health carely is a new way to get health insurance quotes. We offer tools similar to those
-              provided by insurance companies for free and prices are based on donations and not
+              Health carely is a new way to get health insurance quotes. We offer tools similar to those
+              provided by insurance companies for free and prices are based on donations and not
               restrictive health plan networks.
             </p>
           </div>
@@ -132,7 +59,7 @@
         </p>
 
         <h1 class="title">
-          step by step to get your solutions
+          step by step to get your solutions
         </h1>
 
         <ul class="solutions__content">
@@ -143,7 +70,7 @@
 
             <div class="solutions__text">
               <p>
-                Check the disease so you can
+                Check the disease so you can
                 easily choose the right specialist
               </p>
             </div>
@@ -154,20 +81,20 @@
               Choose doctor Specialist </h3>
             <div class="solutions__text">
               <p>
-                Choose a specialist according
-                to your disease complaints
+                Choose a specialist according
+                to your disease complaints
               </p>
             </div>
           </li>
 
           <li class="solutions__item solutions__item--calendar">
             <h3 class="solutions__subtitle">
-              Make a Schedule
+              Make a Schedule
             </h3>
             <div class="solutions__text">
               <p>
-                Make a schedule with the doctor
-                concerned so you can start the
+                Make a schedule with the doctor
+                concerned so you can start the
                 examination
               </p>
             </div>
@@ -179,8 +106,8 @@
             </h3>
             <div class="solutions__text">
               <p>
-                After conducting an examination
-                with a specialist we can help find
+                After conducting an examination
+                with a specialist we can help find
                 the right healing method
               </p>
             </div>
@@ -199,23 +126,24 @@
             Find Doctor
           </p>
 
+
           <h2 class="find__title title">
             Find the right doctor according
-            to your complaint
+            to your complaint
           </h2>
 
           <div class="find__text">
             <p>
-              HealthCare.ly is a free, health app that goes beyond matching you with doctors.
-              It actively helps you find the right doctor based on your medical and personal
+              HealthCare.ly is a free, health app that goes beyond matching you with doctors.
+              It actively helps you find the right doctor based on your medical and personal
               needs and connects you with your HealthCarely community for ongoing
-              support throughout your journey to healthier living.
+              support throughout your journey to healthier living.
             </p>
           </div>
 
           <div class="find__check">
             <p>
-              100% free app designed to help you find the right doctor for you.
+              100% free app designed to help you find the right doctor for you.
             </p>
 
             <p>
@@ -290,29 +218,30 @@
 
           <div class="available__info">
             <p class="available__pretitle pretitle">
-              Make a Shedule
+              Make a Shedule
             </p>
 
             <h2 class="available__title title">
-              Make a schedule in advance
+              Make a schedule in advance
               with the available doctor
             </h2>
 
+
             <div class="available__text">
               <p>
-                Healthcare is a very painful process, especially if you’re not taking care
-                of your health and having regular check-ups. HealhtyCarely makes it
-                easier for everyone to schedule a doctor’s appointment.
+                Healthcare is a very painful process, especially if you’re not taking care
+                of your health and having regular check-ups. HealhtyCarely makes it
+                easier for everyone to schedule a doctor’s appointment.
               </p>
             </div>
 
             <div class="available__checkWrap">
               <p class="available__check">
-                Make a schedule online is easy
+                Make a schedule online is easy
               </p>
 
               <p class="available__check">
-                Easy to connect with doctor
+                Easy to connect with doctor
               </p>
             </div>
 
@@ -333,10 +262,13 @@
           Our Rating
         </p>
 
+
+
         <h2 class="rating__title title">
-          We’re employee benefit at <br />
+          We’re employee benefit at <br />
           7500+ hospital
         </h2>
+
 
         <div class="rating__wrap">
           <ul class="solutions__content solutions__content--rating">
@@ -399,9 +331,12 @@
           Our patients feedback about us
         </h2>
 
+
+
         <p class="feedback__text">
           their impression after using this application
         </p>
+
 
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -413,15 +348,15 @@
                 </div>
 
                 <blockquote class="feedback__quote">
-                  «Healthycarely is an website and mobile app
-                  for you to feel better or get medical help.
-                  We offer you a 24/7 doctor service with no
-                  appointment needed»
+                  “Healthycarely is an website and mobile app
+                  for you to feel better or get medical help.
+                  We offer you a 24/7 doctor service with no
+                  appointment needed”
 
                   <cite class="feedback__author">
                     Naufal Hidayat
                     <p>
-                      Student at Telkom University
+                      Student at Telkom University
                     </p>
                   </cite>
                 </blockquote>
@@ -434,15 +369,15 @@
                   <img class="feedback__img" src="../img/feedback/slaidermen.jpg" alt="девушка с бургером">
                 </div>
                 <blockquote class="feedback__quote">
-                  «Healthycarely is an website and mobile app
-                  for you to feel better or get medical help.
-                  We offer you a 24/7 doctor service with no
-                  appointment needed»
+                  “Healthycarely is an website and mobile app
+                  for you to feel better or get medical help.
+                  We offer you a 24/7 doctor service with no
+                  appointment needed”
 
                   <cite class="feedback__author">
                     Naufal Hidayat
                     <p>
-                      Student at Telkom University
+                      Student at Telkom University
                     </p>
                   </cite>
                 </blockquote>
@@ -455,15 +390,15 @@
                   <img class="feedback__img" src="../img/feedback/slaidermen.jpg" alt="девушка с бургером">
                 </div>
                 <blockquote class="feedback__quote">
-                  «Healthycarely is an website and mobile app
-                  for you to feel better or get medical help.
-                  We offer you a 24/7 doctor service with no
-                  appointment needed»
+                  “Healthycarely is an website and mobile app
+                  for you to feel better or get medical help.
+                  We offer you a 24/7 doctor service with no
+                  appointment needed”
 
                   <cite class="feedback__author">
                     Naufal Hidayat
                     <p>
-                      Student at Telkom University
+                      Student at Telkom University
                     </p>
                   </cite>
                 </blockquote>
@@ -478,131 +413,8 @@
     </section>
   </main>
 
-  <footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__logoWrap">
-        <a class="footer__logoLink" href="#header">
-          <img class="footer__logo logo" src="../img/header/logo.svg" alt="logo">
-        </a>
+  @include('partials/footer.html')
 
-        <div class="footer__text">
-          <p>
-            This free App provides a solution to your health needs by offering
-            you a one-stop access to complete information about various
-            medical checkups. This App carries simple tips and advice to
-            help you maintain a healthy lifestyle.
-          </p>
-        </div>
-      </div>
-
-      <div class="footer__content">
-        <h3 class="footer__title">
-          Overview
-        </h3>
-
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              Checking Health
-            </a>
-          </li>
-
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              Find Docter
-            </a>
-          </li>
-
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              Make a Schedule
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer__content">
-        <h3 class="footer__title">
-          Company
-        </h3>
-
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              Home
-            </a>
-          </li>
-
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              About
-            </a>
-          </li>
-
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              Services
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer__content">
-        <h3 class="footer__title">
-          Explore
-        </h3>
-
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              Terms & Conds
-            </a>
-          </li>
-
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              Privacy Police
-            </a>
-          </li>
-
-          <li class="footer__item">
-            <a class="footer__link" href="">
-              Cookies
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer__content footer__content--social">
-        <div class="footer__title-wrap">
-          <h3 class="footer__title">
-            Social Media
-          </h3>
-        </div>
-        <ul class="footer__list footer__list--social">
-          <li class="footer__item footer__item--social">
-            <a class="footer__link" href="">
-              <img class="footer__icon" src="../img/footer/facebook.svg" alt="">
-            </a>
-          </li>
-
-          <li class="footer__item footer__item--social">
-            <a class="footer__link" href="">
-              <img class="footer__icon" src="../img/footer/instagram.svg" alt="">
-            </a>
-          </li>
-
-          <li class="footer__item footer__item--social">
-            <a class="footer__link" href="">
-              <img class="footer__icon" src="../img/footer/twitter.svg" alt="">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
 
 </body>
 

@@ -1,10 +1,9 @@
+// базовые подключения
 @import 'vars';
+@import "mixins";
 @import 'fonts';
-@import 'reset';
-@import 'media';
+@import "settings";
 @import 'global';
-
-
 
 .burger {
   display: none;
@@ -236,19 +235,19 @@
     }
 
     &--search::before {
-      background-image: url('../images/solutions/search.svg')
+      background-image: url('../img/solutions/search.svg')
     }
 
     &--profile::before {
-      background-image: url('../images/solutions/profile.svg')
+      background-image: url('../img/solutions/profile.svg')
     }
 
     &--calendar::before {
-      background-image: url('../images/solutions/calendar.svg')
+      background-image: url('../img/solutions/calendar.svg')
     }
 
     &--star::before {
-      background-image: url('../images/solutions/star.svg')
+      background-image: url('../img/solutions/star.svg')
     }
 
     &::after {
@@ -361,7 +360,7 @@
 
       &::before {
         content: " ";
-        background-image: url('../images/find/check.svg');
+        background-image: url('../img/find/check.svg');
         height: 24px;
         left: -36px;
         position: absolute;
@@ -419,7 +418,7 @@
 
     &::before {
       content: " ";
-      background-image: url('../images/available/rectop.svg');
+      background-image: url('../img/available/rectop.svg');
       bottom: 11px;
       height: 375px;
       left: 8px;
@@ -441,7 +440,7 @@
 
     &::after {
       content: " ";
-      background-image: url('../images/available/recbot.svg');
+      background-image: url('../img/available/recbot.svg');
       height: 375px;
       position: absolute;
       right: 7px;
@@ -508,7 +507,7 @@
 
     &::before {
       content: " ";
-      background-image: url('../images/find/check.svg');
+      background-image: url('../img/find/check.svg');
       height: 24px;
       left: 0;
       position: absolute;
@@ -572,9 +571,10 @@
     z-index: 1;
     margin-right: 10px;
 
+
     &::before {
       content: " ";
-      background-image: url('../images/feedback/rectangle.svg');
+      background-image: url('../img/feedback/rectangle.svg');
       height: 360px;
       position: absolute;
       right: -13px;
