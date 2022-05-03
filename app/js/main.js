@@ -117,6 +117,66 @@ var swiper = new Swiper('.swiper', {
   } // And if we need scrollbar
 
 });
+var range = document.querySelector("#rangeText"),
+    big = document.querySelector("#bigText");
+range.addEventListener("change", function (event) {
+  big.style.fontSize = this.value + "px";
+}); // document.body.style.background = "#ccc";
+
+var img = document.getElementsByTagName('img');
+var link = document.getElementsByTagName("a");
+var span = document.getElementsByTagName("span");
+var p = document.getElementsByTagName("p");
+var h4 = document.getElementsByTagName('h4');
+var h3 = document.getElementsByTagName('h3');
+var btn = document.querySelector('.visiBtn');
+var card = document.querySelectorAll('.card');
+var slide = document.querySelectorAll('.feedback__content');
+var elements = document.querySelectorAll('.title');
+var heroSection = document.querySelector('.hero__content');
+var findSection = document.querySelector('.find__content');
+var body = document.querySelector('#bigText');
+btn.addEventListener('click', function () {
+  body.classList.toggle('visi');
+  heroSection.classList.toggle('bgnone');
+  findSection.classList.toggle('bgnone');
+
+  for (var i = 0; i < img.length; i++) {
+    img[i].classList.toggle('imgnone');
+  }
+
+  for (var i = 0; i < slide.length; i++) {
+    slide[i].classList.toggle('visi');
+  }
+
+  for (var i = 0; i < h3.length; i++) {
+    h3[i].classList.toggle('test');
+  }
+
+  for (var i = 0; i < h4.length; i++) {
+    h4[i].classList.toggle('test');
+  }
+
+  for (var i = 0; i < card.length; i++) {
+    card[i].classList.toggle('visi');
+  }
+
+  for (var i = 0; i < p.length; i++) {
+    p[i].classList.toggle('test');
+  }
+
+  for (var i = 0; i < span.length; i++) {
+    span[i].classList.toggle('test');
+  }
+
+  for (var i = 0; i < link.length; i++) {
+    link[i].classList.toggle('test');
+  }
+
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.toggle('test');
+  }
+});
 })();
 
 /******/ })()
