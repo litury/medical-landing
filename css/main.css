@@ -246,9 +246,11 @@ body {
 }
 
 .visiBtn {
-  bottom: 0;
+  bottom: 20%;
   position: absolute;
-  right: 69px;
+  right: 82%;
+  max-width: 30px;
+  height: 30px;
 }
 @media (max-width: 1280px) {
   .visiBtn {
