@@ -79,19 +79,19 @@
 // Mobile first
 
 @mixin lg-d {
-  @media (max-width: map-get($breakpoints, xl) - .2px) {
+  @media (max-width: map-get($breakpoints, xl)) {
     @content;
   }
 }
 
 @mixin md-d {
-  @media (max-width: map-get($breakpoints, lg) - .2px) {
+  @media (max-width: map-get($breakpoints, lg)) {
     @content;
   }
 }
 
 @mixin sm-d {
-  @media (max-width: map-get($breakpoints, md) - .2px) {
+  @media (max-width: map-get($breakpoints, md)) {
     @content;
   }
 }

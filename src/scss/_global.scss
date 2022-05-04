@@ -5,26 +5,39 @@ body {
   height: 100%;
 }
 
-
-
 body {
   @extend %manrope-500;
   color: $grey-500;
   font-size: 14px;
   letter-spacing: 0.03em;
-  letter-spacing: 1.4;
+  line-height: 1.4;
+}
+
+// Отступ title при скроле
+#doctor:before,
+#home:before,
+#services:before,
+#review:before {
+  content: "";
+  display: block;
+  height: 150px;
+  margin: -150px 0 0;
 }
 
 .assebliti {
-padding-left: 50px;
-position: relative;
-display: flex;
-} 
+  display: flex;
+  padding-left: 50px;
+  position: relative;
+}
 
 .visiBtn {
+  bottom: 0;
   position: absolute;
-  bottom: 21%;
-  left: 0;
+  right: 69px;
+
+  @include lg-d {
+  display: none;
+  }
 
 }
 
