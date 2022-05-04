@@ -1,1 +1,1 @@
-# litury.github.io
+# https://litury.github.io/medical-landing/
